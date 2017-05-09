@@ -137,7 +137,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="fivePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OGP-ii-6dG"/>
+                                                    <action selector="fivePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jPt-4J-ec7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci2-0I-dgy">
@@ -255,6 +255,9 @@
                             <constraint firstItem="Aov-Pc-ZNu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hh7-je-c80"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDisplay" destination="yCu-cz-YVB" id="Okt-px-53V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

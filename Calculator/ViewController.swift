@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     //This is a connection to the label in our view
-    @IBOutlet weak var labelDisplay: UILabel!
     
+    @IBOutlet weak var labelDisplay: UILabel!
     //Create and instance (an object of the calculator class)
     var model = Calculator()
     
@@ -48,9 +48,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fivePressed(_ sender: Any) {
-        model.addToNewValue(digit: "5")
+    model.addToNewValue(digit: "5")
         labelDisplay.text = model.providedValue
     }
+  
+
    
     @IBAction func sixPressed(_ sender: Any) {
         model.addToNewValue(digit: "6")
