@@ -94,7 +94,6 @@ class ViewController: UIViewController {
     }
     }
     
-    
     @IBAction func divide(_ sender: Any) {
         model.divide()
     }
@@ -109,6 +108,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func subtraction(_ sender: Any) {
-    model.s
+    model.subtraction()
     }
+
+    @IBAction func percentage(_ sender: Any) {
+    model.percentage()
+        equals("")
+    }
+
 }
