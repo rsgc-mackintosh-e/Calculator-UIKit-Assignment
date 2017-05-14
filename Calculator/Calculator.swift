@@ -149,5 +149,31 @@ class Calculator {
         providedValue = ""
         computedValue = nil
     }
-    
+
+func plusMinus(){
+    //find State
+    if providedValue == &&computedValue != nil
+    //Create Temp. Variable
+    if var temporary = computedValue{
+        //make negitave and positive
+        temporary = temporary * -1
+        //Back to provided value
+        prodidedValue = String(format: "%g", temporary)
+    }
 }
+else{
+    //store provided value
+    if var temporary = Double(providedValue){
+        
+        //make negitave
+        temporary = temporary *-1
+        prodidedValue = String(format: "%g", temporary)
+    }
+}
+
+}
+
+
+
+
+
