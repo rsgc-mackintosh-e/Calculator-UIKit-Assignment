@@ -116,4 +116,7 @@ class ViewController: UIViewController {
         equals("")
     }
 
+    @IBAction func plusMinus(_ sender: Any) {
+    model.plusMinus
+    }
 }
