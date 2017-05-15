@@ -118,5 +118,12 @@ class ViewController: UIViewController {
 
     @IBAction func plusMinus(_ sender: Any) {
         model.plusMinus()
+    labelDisplay.text = model.providedValue
     }
+
+    @IBAction func dotPressed(_ sender: Any) {
+        model.addToNewValue(digit: ".")
+        labelDisplay.text = model.providedValue
+    }
+
 }

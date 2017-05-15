@@ -56,9 +56,46 @@ class Calculator {
     }
     func percentage() {
         //Set the operation
-        operation = Operation.addition
+        operation = Operation.percentage
         updateState()
     }
+    
+    func plusMinus() {
+
+        
+        
+        //find state
+        if providedValue == "" && computedValue != nil {
+            
+            //Create temporary variable
+            if var temporary = computedValue {
+                
+                //make negitave and positive
+                temporary = temporary * -1
+                
+                //Back to provided value
+                providedValue = String(format: "%g", temporary)
+            }
+        }
+            
+        else{
+            //Store provided value
+            if var temporary = Double(providedValue) {
+                
+                //Make negitave
+                temporary = temporary * -1
+                
+                //Back to provided vlaue
+                providedValue = String(format: "%g", temporary)
+                
+            }
+        }
+        
+        
+        
+        
+    }
+        
     /**
      Updates calculator state.
      
@@ -89,7 +126,7 @@ class Calculator {
                 // 2. When in this branch, a new provided value has been given.
                 
                 // So, perform the operation!
-                equals()    
+                equals()
             }
             
         }
@@ -114,6 +151,19 @@ class Calculator {
         else if operation == Operation.subtraction{
             computedValue = computedValue! - Double(providedValue)!
         }
+        else if operation == Operation.percentage{
+            
+            //find state
+            if computedValue != nil {
+                
+                //perform function
+                computedValue = computedValue! / (100)
+            } else{
+                //prevent crash
+                computedValue = 0
+            }
+        }
+        
         
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
@@ -142,8 +192,15 @@ class Calculator {
         computedValue = nil
     }
     
-    func plusMinus() {
-        
-    }
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
     
 }
