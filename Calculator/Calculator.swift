@@ -103,10 +103,6 @@ class Calculator {
      */
     func equals() {
         
-        if computedValue != nil {
-            computedValue = computedValue! / 100
-        }else { computedValue = 0}
-        
         // Check operation type
         if operation == Operation.multiplication {
             computedValue = computedValue! * Double(providedValue)!
@@ -118,11 +114,7 @@ class Calculator {
         else if operation == Operation.subtraction{
             computedValue = computedValue! - Double(providedValue)!
         }
-        else if operation == Operation.percentage {
-            }
         
-    }
-}
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
         operation = nil
@@ -149,31 +141,9 @@ class Calculator {
         providedValue = ""
         computedValue = nil
     }
-
-func plusMinus(){
-    //find State
-    if providedValue == &&computedValue != nil
-    //Create Temp. Variable
-    if var temporary = computedValue{
-        //make negitave and positive
-        temporary = temporary * -1
-        //Back to provided value
-        prodidedValue = String(format: "%g", temporary)
-    }
-}
-else{
-    //store provided value
-    if var temporary = Double(providedValue){
+    
+    func plusMinus() {
         
-        //make negitave
-        temporary = temporary *-1
-        prodidedValue = String(format: "%g", temporary)
     }
+    
 }
-
-}
-
-
-
-
-
